@@ -1,6 +1,4 @@
-const ABSENT=0;
-let EmpCheck=Math.floor(Math.random()*10)%2;
-if(EmpCheck==ABSENT)
-console.log("Employee is Absent");
-else
-console.log("Employee is Present");
+const WAGE_PER_HOUR = 20;
+const FULL_DAY_HOUR = 8;
+const dailyEmployeeWage = WAGE_PER_HOUR * FULL_DAY_HOUR;
+console.log("Daily employee wage is "+dailyEmployeeWage);
