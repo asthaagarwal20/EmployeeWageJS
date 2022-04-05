@@ -8,16 +8,20 @@ let totalWage = 0;
 let totalWorkingHours=0;
 let empWage=0;
 let day=0;
-while(day<20)
+let dailyEmpWage=new Array();
+while(day<20&&totalWorkingHours<160)
 {
     let empCheck=Math.floor(Math.random()*10)%3;
-          totalWorkingHours=totalWorkingHours+getWorkingHr(empCheck);
-          empWage=CalEmpWage(totalWorkingHours);
+    let empWorkingHr=getWorkingHr(empCheck);
+          totalWorkingHours=totalWorkingHours+empWorkingHr;
+          dailyEmpWage.push(CalEmpWage(empWorkingHr));
             day++;
         }
+        totalWage=CalEmpWage(totalWorkingHours);
 console.log("Total working hr is " + totalWorkingHours) ;
 console.log("No of Days is "+day);
-console.log("Employee Wage is "+empWage);
+console.log(" Daily Employee Wage is "+dailyEmpWage);
+console.log("Total employee Wage is "+totalWage);
 
 function getWorkingHr(empCheck)
 {
